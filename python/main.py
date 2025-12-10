@@ -1,7 +1,5 @@
-from functions import index_of_sum
+from functions import index_of_sum, max_sum_sub_string
 
-l = [2, 3.5, 4.4, 1.5, 2, 8, 7, 5, -2]
+l = [-2, -3.5, 2, -1, 7]
 
-a = 3
-
-print(index_of_sum(l, a))
+print(max_sum_sub_string(l))
