@@ -1,3 +1,5 @@
+from enum import Enum
+
 #Problem 1
 def index_of_sum(l, a):
     for i in range(len(l)):
@@ -20,3 +22,19 @@ def max_sum_sub_string(l):
             current_sum = 0
 
     return max_sum
+
+#Problem 3
+
+class Colors(Enum):
+    red = 0
+    white = 1
+    blue = 2
+
+def sort_colored_array(array):
+
+
+    for i in range(len(array)):
+        for j in range(0, len(array)):
+            if array[i].value < array[j].value:
+                array[i], array[j] = array[j], array[i]
+    return array
