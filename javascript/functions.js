@@ -28,3 +28,27 @@ function maxSumSubString(arr) {
 }
 
 export { maxSumSubString };
+
+// Problem 3
+function sortColoredArray(arr) {
+    let low = 0;
+    let mid = 0;
+    let high = arr.length - 1;
+
+    while (mid <= high) {
+        if (arr[mid] === 'red') {
+            [arr[low], arr[mid]] = [arr[mid], arr[low]];
+            low++;
+            mid++;
+        } else if (arr[mid] === 'white') {
+            mid++;
+        } else { // arr[mid] === 'blue'
+            [arr[mid], arr[high]] = [arr[high], arr[mid]];
+            high--;
+        }
+    }
+
+    return arr;
+}
+
+export { sortColoredArray };
