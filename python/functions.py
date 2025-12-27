@@ -38,3 +38,17 @@ def sort_colored_array(array):
             if array[i].value < array[j].value:
                 array[i], array[j] = array[j], array[i]
     return array
+
+#Problem 4
+def quadruplets_with_sum_a(l, a):
+    quadruplets = []
+    n = len(l)
+
+    for i in range(n):
+        for j in range(i + 1, n):
+            for k in range(j + 1, n):
+                for m in range(k + 1, n):
+                    if l[i] + l[j] + l[k] + l[m] == a:
+                        quadruplets.append((l[i], l[j], l[k], l[m]))
+
+    return quadruplets

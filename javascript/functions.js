@@ -52,3 +52,33 @@ function sortColoredArray(arr) {
 }
 
 export { sortColoredArray };
+
+// Problem 4
+function quadrupletsWithSumA(arr, a) {
+    const result = [];
+    const n = arr.length;
+
+    for (let i = 0; i < n - 3; i++) {
+        for (let j = i + 1; j < n - 2; j++) {
+            let left = j + 1;
+            let right = n - 1;
+
+            while (left < right) {
+                const sum = arr[i] + arr[j] + arr[left] + arr[right];
+                if (sum === a) {
+                    result.push([arr[i], arr[j], arr[left], arr[right]]);
+                    left++;
+                    right--;
+                } else if (sum < a) {
+                    left++;
+                } else {
+                    right--;
+                }
+            }
+        }
+    }
+
+    return result;
+}
+
+export { quadrupletsWithSumA };
