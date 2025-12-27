@@ -1,4 +1,4 @@
-from functions import index_of_sum, max_sum_sub_string, quadruplets_with_sum_a, sort_colored_array, Colors
+from functions import get_non_overlapping_intervals, sort_colored_array, Colors
 
 # l = [-2, -3.5, 2, -1, 7]
 
@@ -8,6 +8,9 @@ from functions import index_of_sum, max_sum_sub_string, quadruplets_with_sum_a, 
 # val = sort_colored_array(l)
 # print(val)
 
-l = [1, 2, 3, 4, 5, 6, 7, 8]
-a = 18
-print(quadruplets_with_sum_a(l, a))
+# l = [1, 2, 3, 4, 5, 6, 7, 8]
+# a = 18
+# print(quadruplets_with_sum_a(l, a))
+
+l = [[1, 3], [2, 4], [5, 7], [6, 8], [9, 10]]
+print(get_non_overlapping_intervals(l))

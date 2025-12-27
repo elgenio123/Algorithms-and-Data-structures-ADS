@@ -82,3 +82,25 @@ function quadrupletsWithSumA(arr, a) {
 }
 
 export { quadrupletsWithSumA };
+
+// problem 5
+function getNonOverlappingIntervals(intervals) {
+    if (intervals.length === 0) return [];
+
+    // Sort intervals based on the end time
+    intervals.sort((a, b) => a[1] - b[1]);
+
+    const result = [];
+    let lastEndTime = -Infinity;
+
+    for (const interval of intervals) {
+        if (interval[0] >= lastEndTime) {
+            result.push(interval);
+            lastEndTime = interval[1];
+        }
+    }
+
+    return result;
+}
+
+export { getNonOverlappingIntervals };

@@ -52,3 +52,21 @@ def quadruplets_with_sum_a(l, a):
                         quadruplets.append((l[i], l[j], l[k], l[m]))
 
     return quadruplets
+
+# problem 5
+def get_non_overlapping_intervals(intervals):
+    if not intervals:
+        return []
+
+    # Sort intervals based on the start time
+    intervals.sort(key=lambda x: x[0])
+    merged = [intervals[0]]
+
+    for current in intervals[1:]:
+        last_merged = merged[-1]
+        if current[0] <= last_merged[1]:  # Overlap
+            last_merged[1] = max(last_merged[1], current[1])  # Merge
+        else:
+            merged.append(current)
+
+    return merged

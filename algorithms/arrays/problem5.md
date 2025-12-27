@@ -1,0 +1,3 @@
+# Given an array of intervals, merge all overlapping intervals and return an arrwy of non overlapping intervals that covers all the intervals in the input
+
+idea: loop through the intervals abd each time you find that an element of a particular couple of interval is found in another interval, create a new interval that merges this two intervals by taking the smallest number be the start and the biggest number be the end

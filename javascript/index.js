@@ -1,5 +1,5 @@
 import { indexOfSum } from "./functions.js";
-import { quadrupletsWithSumA } from "./functions.js";
+import { getNonOverlappingIntervals } from "./functions.js";
 
 // Example usage:
 // const arr = [2, 7, 11, 15, 17, 8];
@@ -14,7 +14,12 @@ import { quadrupletsWithSumA } from "./functions.js";
 // const sortedColors = sortColoredArray(colorArray);
 // console.log(sortedColors); 
 
-const arr3 = [1, 2, 3, 4, 5, 6, 7, 8];
-const a = 18;
-const quadruplets = quadrupletsWithSumA(arr3, a);
-console.log(quadruplets);
+// const arr3 = [1, 2, 3, 4, 5, 6, 7, 8];
+// const a = 18;
+// const quadruplets = quadrupletsWithSumA(arr3, a);
+// console.log(quadruplets);
+
+const intervals = [[1, 3], [2, 4], [5, 7], [6, 8], [9, 10]];
+
+const nonOverlapping = getNonOverlappingIntervals(intervals);
+console.log(nonOverlapping);
