@@ -96,3 +96,8 @@ def sort_highest_number_of_occurrences(l):
 
     count = Counter(l)
     return sorted(l, key=lambda x: (count[x], x), reverse=True)
+
+#problem 8
+def check_reversed_str2_in_str1(s1, s2):
+    reversed_s2 = s2[::-1]
+    return reversed_s2 in s1

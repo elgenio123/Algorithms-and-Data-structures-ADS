@@ -19,6 +19,11 @@ from functions import get_non_overlapping_intervals, sort_colored_array, Colors
 # from functions import remove_un_matched_parentheses
 # print(remove_un_matched_parentheses(s))
 
-string = "aadvefhaaaqeaabdveef"
-from functions import sort_highest_number_of_occurrences
-print(sort_highest_number_of_occurrences(string))
+# string = "aadvefhaaaqeaabdveef"
+# from functions import sort_highest_number_of_occurrences
+# print(sort_highest_number_of_occurrences(string))
+
+str1 = "abcde"
+str2 = "edc"
+from functions import check_reversed_str2_in_str1   
+print(check_reversed_str2_in_str1(str1, str2))
