@@ -19,7 +19,13 @@ import { getNonOverlappingIntervals } from "./functions.js";
 // const quadruplets = quadrupletsWithSumA(arr3, a);
 // console.log(quadruplets);
 
-const intervals = [[1, 3], [2, 4], [5, 7], [6, 8], [9, 10]];
+// const intervals = [[1, 3], [2, 4], [5, 7], [6, 8], [9, 10]];
 
-const nonOverlapping = getNonOverlappingIntervals(intervals);
-console.log(nonOverlapping);
+// const nonOverlapping = getNonOverlappingIntervals(intervals);
+// console.log(nonOverlapping);
+
+import { removeUnMatchedParentheses } from "./functions.js";
+
+const s = "(we())lco(me)) to (the) java((scr(pt( wo())rld)))";
+const cleanedString = removeUnMatchedParentheses(s);
+console.log(cleanedString);
