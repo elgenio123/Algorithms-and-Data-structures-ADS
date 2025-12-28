@@ -23,7 +23,11 @@ from functions import get_non_overlapping_intervals, sort_colored_array, Colors
 # from functions import sort_highest_number_of_occurrences
 # print(sort_highest_number_of_occurrences(string))
 
-str1 = "abcde"
-str2 = "edc"
-from functions import check_reversed_str2_in_str1   
-print(check_reversed_str2_in_str1(str1, str2))
+# str1 = "abcde"
+# str2 = "edc"
+# from functions import check_reversed_str2_in_str1   
+# print(check_reversed_str2_in_str1(str1, str2))
+
+s = "ressasser"
+from functions import get_palindromic_substrings
+print(get_palindromic_substrings(s))

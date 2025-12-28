@@ -101,3 +101,19 @@ def sort_highest_number_of_occurrences(l):
 def check_reversed_str2_in_str1(s1, s2):
     reversed_s2 = s2[::-1]
     return reversed_s2 in s1
+
+# problem 9
+def get_palindromic_substrings(s):
+    palindromic_subs = []
+
+    def is_palindrome(sub):
+        return sub == sub[::-1]
+
+    n = len(s)
+    for i in range(n):
+        for j in range(i + 1, n + 1):
+            sub = s[i:j]
+            if is_palindrome(sub):
+                palindromic_subs.append(sub)
+
+    return palindromic_subs
