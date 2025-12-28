@@ -115,5 +115,8 @@ def get_palindromic_substrings(s):
             sub = s[i:j]
             if is_palindrome(sub):
                 palindromic_subs.append(sub)
+    
+    # remove single character substrings if not needed
+    palindromic_subs = [sub for sub in palindromic_subs if len(sub) > 1]
 
     return palindromic_subs

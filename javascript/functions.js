@@ -165,3 +165,36 @@ function checkReversedStr2InStr1(s1, s2) {
 }
 
 export { checkReversedStr2InStr1 };
+
+// problem 9
+function getPalindromicSubstrings(s) {
+    const palindromes = new Set();
+
+    for (let i = 0; i < s.length; i++) {
+        // Odd length palindromes
+        let left = i, right = i;
+        while (left >= 0 && right < s.length && s[left] === s[right]) {
+            palindromes.add(s.substring(left, right + 1));
+            left--;
+            right++;
+        }
+
+        // Even length palindromes
+        left = i; right = i + 1;
+        while (left >= 0 && right < s.length && s[left] === s[right]) {
+            palindromes.add(s.substring(left, right + 1));
+            left--;
+            right++;
+        }
+    }
+    //remove single character palindromes
+    palindromes.forEach(p => {
+        if (p.length < 2) {
+            palindromes.delete(p);
+        }
+    });
+
+    return Array.from(palindromes);
+}
+
+export { getPalindromicSubstrings };

@@ -1,5 +1,5 @@
 import { indexOfSum } from "./functions.js";
-import { checkReversedStr2InStr1 } from "./functions.js";
+import { getPalindromicSubstrings } from "./functions.js";
 
 // Example usage:
 // const arr = [2, 7, 11, 15, 17, 8];
@@ -38,7 +38,10 @@ import { checkReversedStr2InStr1 } from "./functions.js";
 
 // import { checkReversedStr2InStr1 } from "./functions.js";
 
-const str1 = "abcde";
-const str2 = "edb";
-const containsReversed = checkReversedStr2InStr1(str1, str2);
-console.log(containsReversed);
+// const str1 = "abcde";
+// const str2 = "edb";
+// const containsReversed = checkReversedStr2InStr1(str1, str2);
+// console.log(containsReversed);
+
+const str1 = "hollo";
+console.log(getPalindromicSubstrings(str1));
