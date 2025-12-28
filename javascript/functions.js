@@ -157,3 +157,11 @@ function sortHighestNumberOfOccurrences(s) {
 }
 
 export { sortHighestNumberOfOccurrences };
+
+// problem 8
+function checkReversedStr2InStr1(s1, s2) {
+    const reversedS2 = s2.split('').reverse().join('');
+    return s1.includes(reversedS2);
+}
+
+export { checkReversedStr2InStr1 };

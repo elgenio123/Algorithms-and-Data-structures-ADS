@@ -1,5 +1,5 @@
 import { indexOfSum } from "./functions.js";
-import { getNonOverlappingIntervals } from "./functions.js";
+import { checkReversedStr2InStr1 } from "./functions.js";
 
 // Example usage:
 // const arr = [2, 7, 11, 15, 17, 8];
@@ -30,8 +30,15 @@ import { getNonOverlappingIntervals } from "./functions.js";
 // const cleanedString = removeUnMatchedParentheses(s);
 // console.log(cleanedString);
 
-import { sortHighestNumberOfOccurrences } from "./functions.js";
+// import { sortHighestNumberOfOccurrences } from "./functions.js";
 
-const string = "aadvefhaaaqeaabdveef";
-const sortedString = sortHighestNumberOfOccurrences(string);
-console.log(sortedString);
+// const string = "aadvefhaaaqeaabdveef";
+// const sortedString = sortHighestNumberOfOccurrences(string);
+// console.log(sortedString);
+
+// import { checkReversedStr2InStr1 } from "./functions.js";
+
+const str1 = "abcde";
+const str2 = "edb";
+const containsReversed = checkReversedStr2InStr1(str1, str2);
+console.log(containsReversed);
