@@ -24,8 +24,14 @@ import { getNonOverlappingIntervals } from "./functions.js";
 // const nonOverlapping = getNonOverlappingIntervals(intervals);
 // console.log(nonOverlapping);
 
-import { removeUnMatchedParentheses } from "./functions.js";
+// import { removeUnMatchedParentheses } from "./functions.js";
 
-const s = "(we())lco(me)) to (the) java((scr(pt( wo())rld)))";
-const cleanedString = removeUnMatchedParentheses(s);
-console.log(cleanedString);
+// const s = "(we())lco(me)) to (the) java((scr(pt( wo())rld)))";
+// const cleanedString = removeUnMatchedParentheses(s);
+// console.log(cleanedString);
+
+import { sortHighestNumberOfOccurrences } from "./functions.js";
+
+const string = "aadvefhaaaqeaabdveef";
+const sortedString = sortHighestNumberOfOccurrences(string);
+console.log(sortedString);

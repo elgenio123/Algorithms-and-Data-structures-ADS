@@ -137,3 +137,23 @@ function removeUnMatchedParentheses(s) {
 }
 
 export { removeUnMatchedParentheses };
+
+// problem 7
+function sortHighestNumberOfOccurrences(s) {
+    const frequencyMap = new Map();
+
+    for (const char of s) {
+        frequencyMap.set(char, (frequencyMap.get(char) || 0) + 1);
+    }
+
+    const sortedChars = Array.from(frequencyMap.entries()).sort((a, b) => b[1] - a[1]);
+
+    let result = '';
+    for (const [char, freq] of sortedChars) {
+        result += char.repeat(freq);
+    }
+
+    return result;
+}
+
+export { sortHighestNumberOfOccurrences };
