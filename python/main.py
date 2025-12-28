@@ -15,6 +15,10 @@ from functions import get_non_overlapping_intervals, sort_colored_array, Colors
 # l = [[1, 3], [2, 4], [5, 7], [6, 8], [9, 10]]
 # print(get_non_overlapping_intervals(l))
 
-s = "(we(lco(me)) to (the) py(th(o(n) wo(rld)))"
-from functions import remove_un_matched_parentheses
-print(remove_un_matched_parentheses(s))
+# s = "(we(lco(me)) to (the) py(th(o(n) wo(rld)))"
+# from functions import remove_un_matched_parentheses
+# print(remove_un_matched_parentheses(s))
+
+string = "aadvefhaaaqeaabdveef"
+from functions import sort_highest_number_of_occurrences
+print(sort_highest_number_of_occurrences(string))

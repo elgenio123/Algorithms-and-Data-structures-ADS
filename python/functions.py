@@ -89,3 +89,10 @@ def remove_un_matched_parentheses(s):
     result = ''.join([char for i, char in enumerate(s) if i not in to_remove])
 
     return result
+
+# problem 7
+def sort_highest_number_of_occurrences(l):
+    from collections import Counter
+
+    count = Counter(l)
+    return sorted(l, key=lambda x: (count[x], x), reverse=True)

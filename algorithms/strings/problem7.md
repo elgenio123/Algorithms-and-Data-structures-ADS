@@ -1,11 +1,5 @@
-function sort_by_freq8(string s)
+# Given a string of characters, sort them in descending order of frequency of the characters 
 
-begin
+get the letter having the list number of occurence and put it in first position
 
-    for i from 1 to length os s do
-        for j from 2 to length of s - i do
-            if s[i] is different s[j] then
-                if freq of s[i] > freq of s[j] then
-                    get all s[j] in s and put them at the positions 
-
-end
+Get the next character having the second least number of oocurence and out in the second and so on
