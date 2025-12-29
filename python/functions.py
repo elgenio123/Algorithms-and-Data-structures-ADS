@@ -188,3 +188,13 @@ def reverse_linked_list(head):
         current = next_node
 
     return prev
+
+#problem 13
+def powerset_recursive_on_integers(s):
+    result = []
+    def backtrack(start, path):
+        result.append(path)
+        for i in range(start, len(s)):
+            backtrack(i + 1, path + [s[i]])
+    backtrack(0, [])
+    return result

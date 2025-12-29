@@ -37,18 +37,21 @@ from functions import get_non_overlapping_intervals, sort_colored_array, Colors
 # from functions import minimum_window_substring
 # print(minimum_window_substring(s, t))
 
-from functions import reverse_linked_list
-class ListNode:
-    def __init__(self, value=0, next=None):
-        self.value = value
-        self.next = next
-head = ListNode(1)
-head.next = ListNode(2)
-head.next.next = ListNode(3)
-head.next.next.next = ListNode(4)
-head.next.next.next.next = ListNode(5)
-val = reverse_linked_list(head)
 
-while val:
-    print(val.value)
-    val = val.next
+# class ListNode:
+#     def __init__(self, value=0, next=None):
+#         self.value = value
+#         self.next = next
+# head = ListNode(1)
+# head.next = ListNode(2)
+# head.next.next = ListNode(3)
+# head.next.next.next = ListNode(4)
+# head.next.next.next.next = ListNode(5)
+# val = reverse_linked_list(head)
+
+# while val:
+#     print(val.value)
+#     val = val.next
+from functions import powerset_recursive_on_integers
+arr = [1, 2, 3, 4, 5]
+print(powerset_recursive_on_integers(arr))
