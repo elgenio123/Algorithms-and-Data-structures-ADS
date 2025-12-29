@@ -52,6 +52,10 @@ from functions import get_non_overlapping_intervals, sort_colored_array, Colors
 # while val:
 #     print(val.value)
 #     val = val.next
-from functions import powerset_recursive_on_integers
-arr = [1, 2, 3, 4, 5]
-print(powerset_recursive_on_integers(arr))
+
+# arr = [1, 2, 3, 4, 5]
+# print(powerset_recursive_on_integers(arr))
+
+from functions import get_all_well_formed_parentheses
+n = 5
+print(get_all_well_formed_parentheses(n))

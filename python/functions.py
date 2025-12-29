@@ -198,3 +198,17 @@ def powerset_recursive_on_integers(s):
             backtrack(i + 1, path + [s[i]])
     backtrack(0, [])
     return result
+
+# Problem 14
+def get_all_well_formed_parentheses(n):
+    result = []
+    def backtrack(s='', left=0, right=0):
+        if len(s) == 2 * n:
+            result.append(s)
+            return
+        if left < n:
+            backtrack(s + '(', left + 1, right)
+        if right < left:
+            backtrack(s + ')', left, right + 1)
+    backtrack()
+    return result
