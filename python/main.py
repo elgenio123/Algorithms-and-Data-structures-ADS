@@ -28,6 +28,11 @@ from functions import get_non_overlapping_intervals, sort_colored_array, Colors
 # from functions import check_reversed_str2_in_str1   
 # print(check_reversed_str2_in_str1(str1, str2))
 
-s = "ressasser"
-from functions import get_palindromic_substrings
-print(get_palindromic_substrings(s))
+# s = "ressasser"
+# from functions import get_palindromic_substrings
+# print(get_palindromic_substrings(s))
+
+s = "reshelloasser"
+t = "shla"
+from functions import minimum_window_substring
+print(minimum_window_substring(s, t))
