@@ -159,3 +159,19 @@ def minimum_window_substring(s, t):
         r += 1    
 
     return "" if ans[0] == float("inf") else s[ans[1]:ans[2] + 1]
+
+# Problem 11
+def remove_node(head, node_to_remove):
+    if head is None:
+            return None
+
+    # remove head node
+    if head.value == node_to_remove:
+        return head.next
+    current = head
+    while current.next is not None:
+        if current.next.value == node_to_remove:
+            current.next = current.next.next
+            return head
+        current = current.next
+    return head

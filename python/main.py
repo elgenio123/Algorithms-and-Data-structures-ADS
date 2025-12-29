@@ -32,7 +32,24 @@ from functions import get_non_overlapping_intervals, sort_colored_array, Colors
 # from functions import get_palindromic_substrings
 # print(get_palindromic_substrings(s))
 
-s = "reshelloasser"
-t = "shla"
-from functions import minimum_window_substring
-print(minimum_window_substring(s, t))
+# s = "reshelloasser"
+# t = "shla"
+# from functions import minimum_window_substring
+# print(minimum_window_substring(s, t))
+
+from functions import remove_node
+class ListNode:
+    def __init__(self, value=0, next=None):
+        self.value = value
+        self.next = next
+head = ListNode(1)
+head.next = ListNode(2)
+head.next.next = ListNode(3)
+head.next.next.next = ListNode(4)
+head.next.next.next.next = ListNode(5)
+val = remove_node(head, 1)
+
+# print the linked list
+while val:
+    print(val.value)
+    val = val.next
