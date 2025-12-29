@@ -47,7 +47,7 @@
 // let s = "I love javascript";
 // console.log(minimumWindowSubstring(s, "love javs"));
 
-import { remmoveNodeLinkedList } from "./functions.js";
+import { reverseLinkedList } from "./functions.js";
 
 // test linked list removal
 const head = {
@@ -64,8 +64,8 @@ const head = {
     }
 };
 
-const updatedHead = remmoveNodeLinkedList(head, 4);
-let current = updatedHead;
+const reversedList = reverseLinkedList(head);
+let current = reversedList;
 while (current) {
     console.log(current.value); 
     current = current.next;
