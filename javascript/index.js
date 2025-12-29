@@ -1,5 +1,5 @@
 import { indexOfSum } from "./functions.js";
-import { getPalindromicSubstrings } from "./functions.js";
+import { minimumWindowSubstring } from "./functions.js";
 
 // Example usage:
 // const arr = [2, 7, 11, 15, 17, 8];
@@ -43,5 +43,8 @@ import { getPalindromicSubstrings } from "./functions.js";
 // const containsReversed = checkReversedStr2InStr1(str1, str2);
 // console.log(containsReversed);
 
-const str1 = "hollo";
-console.log(getPalindromicSubstrings(str1));
+// const str1 = "hollo";
+// console.log(getPalindromicSubstrings(str1));
+
+let s = "I love javascript";
+console.log(minimumWindowSubstring(s, "love javs"));

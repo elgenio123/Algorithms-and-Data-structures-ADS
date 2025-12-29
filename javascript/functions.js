@@ -198,3 +198,47 @@ function getPalindromicSubstrings(s) {
 }
 
 export { getPalindromicSubstrings };
+
+// problem 10
+function minimumWindowSubstring(s, t) {
+    let tFreq = new Map();
+    for (let char of t) {
+        tFreq.set(char, (tFreq.get(char) || 0) + 1);
+    }
+
+    let left = 0, right = 0;
+    let required = tFreq.size;
+    let formed = 0;
+    const windowCounts = new Map();
+    let minLength = Infinity;
+    let minWindow = "";
+
+    while (right < s.length) {
+        let char = s[right];
+        windowCounts.set(char, (windowCounts.get(char) || 0) + 1);
+
+        if (tFreq.has(char) && windowCounts.get(char) === tFreq.get(char)) {
+            formed++;
+        }
+
+        while (left <= right && formed === required) {
+            char = s[left];
+
+            if (right - left + 1 < minLength) {
+                minLength = right - left + 1;
+                minWindow = s.substring(left, right + 1);
+            }
+
+            windowCounts.set(char, windowCounts.get(char) - 1);
+            if (tFreq.has(char) && windowCounts.get(char) < tFreq.get(char)) {
+                formed--;
+            }
+            left++;
+        }
+        right++;
+    }
+
+    return minWindow;
+}
+
+export { minimumWindowSubstring };
