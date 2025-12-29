@@ -242,3 +242,27 @@ function minimumWindowSubstring(s, t) {
 }
 
 export { minimumWindowSubstring };
+
+// problem 11
+function remmoveNodeLinkedList(head, node) {
+    if (!head) return null;
+
+    // If the node to be removed is the head
+    if (head.value === node) {
+        return head.next;
+    }
+
+    let current = head;
+    while (current.next && current.next.value !== node) {
+        current = current.next;
+    }
+
+    // If the node was found, remove it
+    if (current.next) {
+        current.next = current.next.next;
+    }
+
+    return head;
+}
+
+export { remmoveNodeLinkedList };

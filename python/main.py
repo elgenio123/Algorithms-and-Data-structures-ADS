@@ -47,7 +47,7 @@ head.next = ListNode(2)
 head.next.next = ListNode(3)
 head.next.next.next = ListNode(4)
 head.next.next.next.next = ListNode(5)
-val = remove_node(head, 1)
+val = remove_node(head, 4)
 
 # print the linked list
 while val:

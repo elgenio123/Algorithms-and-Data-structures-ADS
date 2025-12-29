@@ -1,5 +1,3 @@
-import { indexOfSum } from "./functions.js";
-import { minimumWindowSubstring } from "./functions.js";
 
 // Example usage:
 // const arr = [2, 7, 11, 15, 17, 8];
@@ -46,5 +44,29 @@ import { minimumWindowSubstring } from "./functions.js";
 // const str1 = "hollo";
 // console.log(getPalindromicSubstrings(str1));
 
-let s = "I love javascript";
-console.log(minimumWindowSubstring(s, "love javs"));
+// let s = "I love javascript";
+// console.log(minimumWindowSubstring(s, "love javs"));
+
+import { remmoveNodeLinkedList } from "./functions.js";
+
+// test linked list removal
+const head = {
+    value: 1,
+    next: {
+        value: 2,
+        next: {
+            value: 3,
+            next: {
+                value: 4,
+                next: null
+            }
+        }
+    }
+};
+
+const updatedHead = remmoveNodeLinkedList(head, 4);
+let current = updatedHead;
+while (current) {
+    console.log(current.value); 
+    current = current.next;
+}
