@@ -47,7 +47,7 @@
 // let s = "I love javascript";
 // console.log(minimumWindowSubstring(s, "love javs"));
 
-import { powerSetRecursiveInt } from "./functions.js";
+import { getAllWelFormedParentheses } from "./functions.js";
 
 // // test linked list removal
 // const head = {
@@ -71,6 +71,10 @@ import { powerSetRecursiveInt } from "./functions.js";
 //     current = current.next;
 // }
 
-let t = [1, 2, 3, 4, 5];
-const result = powerSetRecursiveInt(t);
+// let t = [1, 2, 3, 4, 5];
+// const result = powerSetRecursiveInt(t);
+// console.log(result);
+
+let n = 5;
+const result = getAllWelFormedParentheses(n);
 console.log(result);
