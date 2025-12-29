@@ -37,7 +37,7 @@ from functions import get_non_overlapping_intervals, sort_colored_array, Colors
 # from functions import minimum_window_substring
 # print(minimum_window_substring(s, t))
 
-from functions import remove_node
+from functions import reverse_linked_list
 class ListNode:
     def __init__(self, value=0, next=None):
         self.value = value
@@ -47,9 +47,8 @@ head.next = ListNode(2)
 head.next.next = ListNode(3)
 head.next.next.next = ListNode(4)
 head.next.next.next.next = ListNode(5)
-val = remove_node(head, 4)
+val = reverse_linked_list(head)
 
-# print the linked list
 while val:
     print(val.value)
     val = val.next
