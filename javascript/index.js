@@ -47,26 +47,30 @@
 // let s = "I love javascript";
 // console.log(minimumWindowSubstring(s, "love javs"));
 
-import { reverseLinkedList } from "./functions.js";
+import { powerSetRecursiveInt } from "./functions.js";
 
-// test linked list removal
-const head = {
-    value: 1,
-    next: {
-        value: 2,
-        next: {
-            value: 3,
-            next: {
-                value: 4,
-                next: null
-            }
-        }
-    }
-};
+// // test linked list removal
+// const head = {
+//     value: 1,
+//     next: {
+//         value: 2,
+//         next: {
+//             value: 3,
+//             next: {
+//                 value: 4,
+//                 next: null
+//             }
+//         }
+//     }
+// };
 
-const reversedList = reverseLinkedList(head);
-let current = reversedList;
-while (current) {
-    console.log(current.value); 
-    current = current.next;
-}
+// const reversedList = reverseLinkedList(head);
+// let current = reversedList;
+// while (current) {
+//     console.log(current.value); 
+//     current = current.next;
+// }
+
+let t = [1, 2, 3, 4, 5];
+const result = powerSetRecursiveInt(t);
+console.log(result);

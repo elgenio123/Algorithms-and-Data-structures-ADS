@@ -283,3 +283,22 @@ function reverseLinkedList(head) {
 }
 
 export { reverseLinkedList };
+
+// problem 13
+function powerSetRecursiveInt(arr) {
+    const result = [];
+
+    function backtrack(start, path) {
+        result.push([...path]);
+        for (let i = start; i < arr.length; i++) {
+            path.push(arr[i]);
+            backtrack(i + 1, path);
+            path.pop();
+        }
+    }
+
+    backtrack(0, []);
+    return result;
+}
+
+export { powerSetRecursiveInt };
