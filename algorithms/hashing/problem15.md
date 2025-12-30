@@ -1,0 +1,1 @@
+# Design a data structure that follows the constriants of the Least recently used
