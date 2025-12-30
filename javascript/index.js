@@ -73,8 +73,22 @@ import { getAllWelFormedParentheses } from "./functions.js";
 
 // let t = [1, 2, 3, 4, 5];
 // const result = powerSetRecursiveInt(t);
+// // console.log(result);
+
+// let n = 5;
+// const result = getAllWelFormedParentheses(n);
 // console.log(result);
 
-let n = 5;
-const result = getAllWelFormedParentheses(n);
-console.log(result);
+// LRU Cache example
+import { LRUCache } from "./custom_types.js";
+
+const lru = new LRUCache(2);
+lru.put(1, 1);
+lru.put(2, 2);
+console.log(lru.get(1)); // 1
+lru.put(3, 3); // evicts 2
+console.log(lru.get(2)); // -1
+lru.put(4, 4); // evicts 1
+console.log(lru.get(1)); // -1
+console.log(lru.get(3)); // 3
+console.log(lru.get(4)); // 4
